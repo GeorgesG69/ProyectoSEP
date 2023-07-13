@@ -37,6 +37,12 @@ imp_react_carga = np.array(df_load.iloc[:,10])                      #Impedancia 
 tipo_carga = np.array(df_load.iloc[:,2])                            #Tipo de carga
 barra_carga_i = np.array(df_load.iloc[:,0])                         #Barra de conexion i
 barra_carga_j = np.full((len(df_load.iloc[:,0])),0)                 #Barra de conexion j
+vnom_carga = np.array(df_load.iloc[:, 3]) * 10**3                   #Voltaje nominal de la carga
+i_carga = np.array(df_load.iloc[:, 4])                              #Corriente de la carga
+p_carga = np.array(df_load.iloc[:, 5])                              #Potencia activa de la carga
+q_carga = np.array(df_load.iloc[:, 6])                              #Potencia reactiva de la carga
+s_carga = np.array(df_load.iloc[:, 7])                              #Potencia aparente de la carga
+fp_carga = np.array(df_load.iloc[:, 8])                             #Factor de potencia de la carga
 index_carga = np.concatenate(([barra_carga_i],[barra_carga_j]))     #Matriz de conexion de las cargas
 index_carga = np.transpose(index_carga)
 
