@@ -133,6 +133,12 @@ def run():
     p_gen, q_gen= potencia.generador(imp_gen, voltaje, phi, vth_rect, barra_gen_i)
     #print(p_gen)
 
+    #Potencia de la carga
+    s_load, p_load, q_load  = potencia.Cargas(imp_carga, vth_rect, barra_carga_i, i_carga, p_carga, q_carga, s_carga, fp_carga)
+
+    #Flojos de potencia
+
+    fpot = potencia.Lineas(imp_linea, vth_rect, barra_linea_i, barra_linea_j)
 
 
 
